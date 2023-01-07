@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    password: "{cipher}165a542719a1b876710a7b794897984b79072ae3bd50c20a266d59d788e23a62"
+    url: jdbc:postgresql://localhost:5432/stock
+    username: amigoscode
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      registerWithEureka: true
+      fetchRegistry: true
+  instance:
+    preferIpAddress: true
+      
+message: "i am from default"
